@@ -8,22 +8,22 @@ plugins:
 
 #-------------------------------
 # General Site Settings
-title: Johnny Hopkins
-description: "Hi I'm Johnny, and I'm a Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
+title: Chidiebere Chimezie
+description: "Hi, I'm Chidiebere, and I'm a Data Scientist & Analytics professional. My portfolio focuses on solving business problems in the retail and finance industry using Data Science & Analytics to add tangible value. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
-location: "London, UK"
-resume_url: /docs/resume.docx
-avatar_image: /img/profile_picture.JPG
+subtitle: Data Science | <span style="color:#f58506"> Analytics </span>
+location: "New York, US"
+resume_url: /docs/Chidiebere Sam Chimezie Resume 2026.docx
+avatar_image: /img/Profile_pic.png
 
 #-------------------------------
 # Contact links
-linkedln: "https://linkedln.com/#" # Add your linkedln handle
-github: "https://github.com/#"  # Add your github handle
+linkedln: "https://www.linkedin.com/in/-chimezie/" 
+github: "https://github.com/cschimezie-dot"  
 
 paginate: 6
 paginate_path: "/page/:num"
@@ -39,7 +39,6 @@ defaults:
       layout: post
       read_time: true
       share: false
-
 
 #-------------------------------
 # Exclude from processing.
