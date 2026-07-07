@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don’t Ghost The Broker: Borrower Fallout Prediction"
-image: "/posts/borrower_fallout_title_image.jpg"
+image: "/posts/computer.jpg"
 tags: [Python, Pandas, Machine Learning, Random Forest, Commercial Lending, Lead Scoring]
 ---
 
