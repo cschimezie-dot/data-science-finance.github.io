@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Catch The Bad Apples: Commercial Loan Vintage Risk Analysis"
-image: "/posts/ChatGPT Image Jul 6, 2026, 10_38_49 PM.png"
+image: "/posts/apples_in_a_wooden_bowl_still_life.jpg"
 tags: [Python, Pandas, Machine Learning, Random Forest, Commercial Lending, Risk Analytics]
 ---
 
