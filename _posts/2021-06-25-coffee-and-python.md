@@ -1,66 +1,94 @@
 ---
 layout: post
-title: Coffee & Python
+title: From Deals To Data (Coffee Chat)
 image: "/posts/coffee_python.jpg"
-tags: [Python, Coffee]
+tags: [Python, Data Science, Statistics, Commercial Lending, Problem Solving]
 ---
 
-# My first project
-## is all about
-### how much
-#### I LOVE
-##### Python & Coffee!
+# From Deals To Data
+
+## Why I’m Learning Python
+
+My background started in business, sales, and commercial lending. I’ve worked around borrowers, loan scenarios, lender guidelines, and real business problems where the right decision can save time, money, and opportunity.
+
+Now I’m building on that background as a Bachelor of Science major learning statistics and data science.
+
+I’m not learning Python just to say I can code. I’m learning Python because I want to use data to solve real problems.
 
 ---
 
-Firstly, I love Python so much, here is some code!
+## How I Think About Data
 
-```
-my_love_for_python = 0
-my_python_knowledge = 0
-
-for day in lifetime:
-    my_love_for_python += 1
-    my_python_knowledge += 1
-```
-
-Just so you really see how much I love Python, here is some code BUT with some colours for keywords & functionality!
+To me, data science is about finding the story inside messy information.
 
 ```python
-my_love_for_python = 0
-my_python_knowledge = 0
+business_problem = "too many decisions, not enough clarity"
 
-for day in lifetime:
-    my_love_for_python += 1
-    my_python_knowledge += 1  
+data = "the clues hiding inside the business"
+
+statistics = "the way we test what is really happening"
+
+model = "a tool that helps explain the pattern"
+
+decision = "what the business should do next"
 ```
 
-Here is an **unordered list** showing some things I love about Python
+The goal is not just to build a model.
 
-* For my work
-    * Data Analysis
-    * Data Visualisation
-    * Machine Learning
-* For fun
-    * Deep Learning
-    * Computer Vision
-    * Projects about coffee
-
-Here is an _ordered list_ showing some things I love about coffee
-
-1. The smell
-    1. Especially in the morning, but also at all times of the day!
-2. The taste
-3. The fact I can run the 100m in approx. 9 seconds after having 4 cups in quick succession
-
-I love Python & Coffee so much, here is that picture from the top of my project AGAIN, but this time, in the BODY of my project!
-
-![alt text](/img/posts/coffee_python.jpg "Coffee & Python - I love them!")
-
-The above image is just linked to the actual file in my Github, but I could also link to images online, using the URL!
-
-A line break, like this one below - helps me make sense of what I'm reading, especially when I've had so much coffee that my vision goes a little blurry
+The goal is to help people make smarter decisions.
 
 ---
 
-I could also add things to my project like links, tables, quotes, and HTML blocks - but I'm starting to get a cracking headache.  Must be coffee time.
+## What I’m Focused On
+
+I’m interested in projects where data science connects directly to business impact.
+
+Some of the questions I like working on are:
+
+* Which borrowers are most likely to move forward?
+* Which loans show early warning signs?
+* Which customers are worth more follow-up?
+* Which patterns are hidden inside messy business data?
+* Which decisions can be improved with statistics and machine learning?
+
+I enjoy projects where the output is useful, clear, and connected to a real decision.
+
+---
+
+## My Data Science Mindset
+
+```python
+for project in portfolio:
+    understand_the_business_problem()
+    clean_the_data()
+    test_the_pattern_with_statistics()
+    build_the_model()
+    explain_the_results()
+    connect_it_to_business_value()
+```
+
+That is the way I want to approach data science.
+
+Not just code.
+
+Not just charts.
+
+Not just predictions.
+
+Clear business questions, clean analysis, and practical insights people can actually use.
+
+---
+
+## What This Portfolio Shows
+
+This portfolio is where I’m documenting my growth from business problem solver to data-driven analyst.
+
+Each project is built to show three things:
+
+1. I can work through messy data.
+2. I can use statistics and machine learning to find patterns.
+3. I can explain the results in a way a business person can understand.
+
+That last part matters most.
+
+A model is only valuable if people can understand it and use it.
