@@ -13,13 +13,13 @@ This project focused on a real business problem for Noble Equity:
 
 **Which commercial mortgage borrowers are likely to pay the application fee, and which borrowers are likely to disappear before moving forward?**
 
-In commercial lending, lead volume alone is not enough. A company can receive many borrower applications, but if those borrowers do not pay, submit documents, or continue through the process, the sales team wastes time chasing weak leads.
+In commercial lending, lead volume alone is not enough. A company can receive many borrower applications, but if those borrowers do not pay, submit documents, or continue through the process, the sales team wastes time chasing weak leads. It was very frustrating for mortgage sales reps to not go home without a paycheck.
 
-The goal of this project was to build a borrower-fallout prediction model that helps Noble Equity distinguish serious borrowers from those more likely to drop out.
+The goal of this project was to build a borrower-fallout prediction model that helps Noble Equity distinguish serious borrowers from those more likely to drop out. 
 
 In simple terms, the model helps answer:
 
-> "Which borrowers are worth more follow-up time, and which borrowers are more likely to ghost the broker?"
+> "Which borrowers are worth follow-up, and which borrowers are more likely to ghost the broker?"
 
 ---
 
@@ -68,7 +68,7 @@ The project used:
 * Noble Equity payment data
 * Borrower emails to connect applications to payment outcomes
 
-The main borrower features included:
+The main borrower features included, despite there being over 30:
 
 * Requested loan amount
 * Credit score
@@ -89,7 +89,8 @@ A major part of this project was cleaning the borrower data.
 
 The raw application data had messy values such as:
 
-* Dollar signs
+* Removed Dollar signs
+* Merged data sets from different application software. 
 * Commas
 * Text inside money fields
 * Missing values
@@ -105,9 +106,9 @@ I cleaned the key numeric fields so the model could read them as numbers:
 * `liquidity`
 * `annual_income`
 
-I also used KNN imputation to fill missing numeric values based on similar borrowers.
+I also used KNN imputation to fill in missing numeric values by using similar borrowers, since the dataset of paid borrowers was too small to remove. It would hurt the data.
 
-This matters because a machine learning model cannot make reliable predictions from messy borrower responses.
+This matters because a machine learning model cannot reliably predict from messy borrower responses.
 
 ---
 
@@ -289,9 +290,21 @@ joblib.dump(
 
 ## Key Discoveries
 
-The model demonstrated that borrower fallout can be analyzed by examining patterns in application data. Testing found that loan amount and credit score were t Liquidity, annual income, and years in business each accounted for 40% of borrower fallouts. 
+The model demonstrated that borrower fallout can be analyzed by examining patterns in application data. Testing found that loan amount and credit score were t Liquidity, annual income, and years in business each accounted for 40.03% of borrower fallouts. 9.72% for requested loan amount, 8.35% for credit, 8.38% for liquidity, 8.27% for income, and 6.86% for years in business. Our model achieved an accuracy of 85% using the F1 score metric and confusion matrix. See below.
 
-Instead of guessing which leads are serious, Noble Equity can use the model to estimate dropout risk.
+## Feature Importance Report
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00        15
+           1       0.90      1.00      0.95       129
+
+    accuracy                           0.90       144
+   macro avg       0.45      0.50      0.47       144
+weighted avg       0.80      0.90      0.85       144
+
+<img width="1042" height="849" alt="image" src="https://github.com/user-attachments/assets/d56a1aa1-7a56-4e32-ba9b-4f3d4b224942" />
+
+This means instead of guessing which leads are serious, Noble Equity can use an accurate predictor model to estimate dropout risk.
 
 The model used borrower financial strength, deal type, property type, geography, and financing request details to also factor in a dropout probability score.
 
@@ -357,6 +370,10 @@ In plain English, this project helps Noble Equity answer:
 > "Which borrowers are serious, and which borrowers are likely to disappear before paying?"
 
 That makes the project useful for lead scoring, borrower prioritization, sales follow-up, and commercial mortgage pipeline management.
+We will take further action in focusing 
+
+
+
 
 ---
 
