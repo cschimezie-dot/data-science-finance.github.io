@@ -304,6 +304,7 @@ The model demonstrated that borrower fallout can be analyzed by examining patter
    macro avg       0.45      0.50      0.47       144
 weighted avg       0.80      0.90      0.85       144
 
+## Confusion Matrix
 <img width="1042" height="849" alt="image" src="https://github.com/user-attachments/assets/d56a1aa1-7a56-4e32-ba9b-4f3d4b224942" />
 
 This means instead of guessing which leads are serious, Noble Equity can use an accurate predictor model to estimate dropout risk.
