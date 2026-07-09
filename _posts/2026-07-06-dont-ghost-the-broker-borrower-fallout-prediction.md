@@ -300,7 +300,7 @@ joblib.dump(
 ---
 
 ## Key Discoveries
-## Before AI
+## Before AI Enhancement
 <img width="826" height="205" alt="Screenshot 2026-07-08 at 3 15 28 PM" src="https://github.com/user-attachments/assets/aebe7087-8b52-447d-87c1-195bcd897c66" />
 
 
