@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Chidiebere Chimezie
-description: "Hi, I’m Chidiebere, a Data Scientist & Analytics professional. My portfolio focuses on solving business problems in the retail and finance industries to deliver tangible value. Please check out my GitHub and LinkedIn, or download my Resume below!"
+description: "Hi, I’m Chidiebere, a Data Scientist & Analytics professional. My portfolio focuses on solving business problems in the Credit, Finance, and FinTech industries to deliver tangible value. Please check out my GitHub and LinkedIn, or download my Resume below!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
