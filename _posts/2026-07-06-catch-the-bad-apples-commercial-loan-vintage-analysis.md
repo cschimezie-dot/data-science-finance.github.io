@@ -317,7 +317,7 @@ The actual vs predicted chart compares the real `Net_Loss_Pct` values against th
 
 <br>
 
-![Actual vs Predicted Net Loss]
+##[Actual vs Predicted Net Loss]
 
 <img width="1200" height="630" alt="actual_vs_predicted_net_loss" src="https://github.com/user-attachments/assets/29a76046-ea90-480b-a714-5a661648e132" />
 
@@ -326,7 +326,7 @@ I also created a regression loss-bucket matrix. Since this is not a classificati
 
 <br>
 
-![Loss Bucket Matrix]
+##[Loss Bucket Matrix]
 
 
 <img width="1200" height="630" alt="loss_bucket_matrix" src="https://github.com/user-attachments/assets/d98ea0cd-6769-4252-a45b-d4f8198cbc12" />
@@ -345,21 +345,22 @@ These vintages would be good candidates for deeper review by a commercial credit
 
 <br>
 
-![Vintage Performance]
+##[Vintage Performance Years On Book]
 
 
 <img width="1200" height="630" alt="vintage_performance_chart" src="https://github.com/user-attachments/assets/4483c28a-b872-4947-b460-63fa68cdfe46" />
+Years-on-book analysis also showed that losses were highest at the peak of 2024/09. Loans started to get better after that. A Prescriptive analysis would be okay: why did they get better after that year? Was it any of the four main factors: a reduction in interest rates or an improvement in loan products? What relationship does it have in regard to our feature importance report? 
 
 
-Months-on-book analysis also showed that losses were not perfectly flat across loan age. This supports the value of monitoring seasoning patterns over time.
 
 <br>
 
-![Months On Book Loss]
+##[Months On Book Loss]
 
 
 <img width="1200" height="630" alt="months_on_book_loss_chart" src="https://github.com/user-attachments/assets/eb77bf26-c53d-4646-b3ce-ed98dcca9771" />
 
+Months-on-book analysis also showed that losses were not perfectly flat across loan age. This supports the value of monitoring seasoning patterns over time. The higher the bullet point, the higher the losses and vice versa. This shows that losses fluctuated so we can further diagnose the issue.
 ___
 
 # Business Impact <a name="business-impact"></a>
@@ -380,7 +381,7 @@ ___
 
 # Final Business Summary <a name="final-summary"></a>
 
-This project built a Random Forest Regression model to predict commercial loan `Net_Loss_Pct`. The strongest signals were credit utilization spikes, original internal risk rating, revenue drops, and months on book.
+This project built a Random Forest Regression model to predict commercial loan `Net_Loss_Pct`. The strongest signals were credit utilization spikes, original internal risk ratings, revenue drops, and months on the books.
 
 In business terms, the model helps identify the bad apples in a commercial loan portfolio earlier. A lender could use this type of workflow to review risky vintages, investigate borrower stress signals, and improve portfolio monitoring before losses become larger.
 
