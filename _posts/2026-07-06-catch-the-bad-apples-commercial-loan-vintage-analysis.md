@@ -89,7 +89,7 @@ That means the model was trained to predict the percentage loss associated with 
 
 Before training the model, I cleaned and prepared the data so the model could understand it properly.
 
-The main preparation steps were:
+##The main preparation steps were:
 
 1. Loaded the AI-generated commercial loan vintage dataset
 2. Checked rows, columns, and missing values
@@ -98,6 +98,7 @@ The main preparation steps were:
 5. Converted categorical fields like `Industry_Sector` into numeric dummy variables
 6. Split the data into `X` features and `y` target
 7. Used a train/test split to test the model fairly
+8. Model Validation to ensure accuracy. 
 
 One important lesson from this project was that raw date and ID columns can break or mislead a model. The model should learn from business features, not from meaningless identifiers.
 
