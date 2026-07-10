@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Don’t Ghost The Lender: Borrower Fallout Prediction"
+title: "Don’t Ghost The Mortgage Broker: Borrower Fallout Prediction"
 image: "/posts/borrower_fallout_title_image.jpg"
 tags: [Python, Pandas, Machine Learning, Random Forest, Commercial Lending, Lead Scoring]
 ---
 
-# "Don’t Ghost The Lender" Borrower Fallout Prediction
+# "Don’t Ghost The Mortgage Broker" Borrower Fallout Prediction
 
 ## Project Overview
 
