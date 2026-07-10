@@ -35,7 +35,7 @@ ___
 
 Commercial lenders need to understand which loan batches are starting to weaken. A single loan may not tell the full story, but a loan vintage can show whether a group of loans originated around the same time is performing worse than expected.
 
-This project uses synthetic commercial lending data to predict `Net_Loss_Pct`, a continuous loss percentage field. Because the target is numeric, I used a **Random Forest Regression** model instead of a classification model.
+This project uses synthetic commercial lending data to predict `Net_Loss_Pct`, a continuous loss percentage field. Because the target is numeric, I used a **Random Forest Regression** model. This was one of my first projects, so I decided to test it out and see how it did.
 
 <br>
 
@@ -52,19 +52,19 @@ The workflow also produced:
 * Regression loss-bucket matrix
 * Vintage performance summary
 * Months-on-book loss summary
-* Saved model and model column files
+* Saved model file
 
 <br>
 
 ### Results <a name="overview-results"></a>
 
-The model produced a strong test R² score of `0.9630`, with an average cross-validation score of `0.9611`.
+The model achieved a strong test R² score of `0.9630` and an average cross-validation score of `0.9611`. This is fairly normal for an AI-generated model; it tends to bootstrap from other existing datasets.
 
 | Metric | Score |
 |---|---:|
-| R² Score | 0.9630 |
-| Mean Absolute Error (%) | 0.2665 |
-| Root Mean Squared Error (%) | 0.7381 |
+| R² Score | 0.9630 | ✔
+| Mean Absolute Error (%) | 0.2665 | ✔
+| Root Mean Squared Error (%) | 0.7381 | ✔
 | Average Cross-Validation Score | 0.9611 |
 
 The basic overfitting check showed:
@@ -73,15 +73,15 @@ The basic overfitting check showed:
 |---|---:|
 | Training R² Score | 0.9945 |
 | Testing R² Score | 0.9630 |
-| Difference | 0.0315 |
+| Difference | 0.0315 | ✔
 
-The training and testing scores are close, so the model looks stable from a basic overfitting check. However, the score is still very high, so I would review the data for leakage before treating this as a real credit model.
+The training and testing scores are close, so the model appears stable and is performing well on new data, this is a basic overfitting check. However, the score remains very high, so I would review the data for leakage before treating it as a real credit model.
 
 <br>
 
 ### Growth/Next Steps <a name="overview-growth"></a>
 
-This project is portfolio-grade, not production-ready. The next step would be to test the workflow with real commercial lending data, stronger time-based validation, delinquency history, collateral fields, macroeconomic variables, and a deeper leakage review.
+This project is portfolio-grade, not production-ready. The next step would be to test the workflow with real commercial lending data, stronger time-based validation, delinquency history, collateral fields, macroeconomic variables, and a deeper review of leakage, which is what working with an institution allows me to do.
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 # Dataset Used <a name="dataset-used"></a>
 
-The project uses `commercial_vintage_master_dataset.xlsx`, a synthetic commercial lending dataset with loan snapshot records.
+The project uses `commercial_vintage_master_dataset.xlsx`, a synthetic commercial lending dataset made by AI with loan snapshot records.
 
 The dataset includes:
 
@@ -276,7 +276,7 @@ The model results were:
 
 | Metric | Score |
 |---|---:|
-| R² Score | 0.9630 |
+| R² Score | 0.9630 | 
 | Mean Absolute Error (%) | 0.2665 |
 | Root Mean Squared Error (%) | 0.7381 |
 | Average Cross-Validation Score | 0.9611 |
@@ -287,7 +287,7 @@ The overfitting check compared training and testing R²:
 * Testing R² Score: `0.9630`
 * Difference: `0.0315`
 
-Because the gap is not large, the model looks stable from a simple overfitting check. Still, the performance is unusually strong, so a deeper leakage review would be important before using this type of model in a real credit environment.
+Because the gap is not large, the model appears stable based on a simple overfitting check. Still, the performance is unusually strong, so a deeper review of leakage would be important before using this type of model in a real-world credit environment. Withthe R² being so high technically, it means that the model predicted 96% of the reason why a net loss occurred. Think of R like how much the model "Revealed".
 
 ___
 
@@ -399,3 +399,51 @@ If I expanded this project, I would add:
 7. A deeper leakage review with credit risk stakeholders
 
 These improvements would make the analysis more realistic and more useful for a real commercial lending environment.
+
+ # Streamlit App Demo
+ 
+ Local Hosting: http://localhost:8504/
+
+  To make this project more interactive, I also built a local Streamlit app for the Commercial Loan Vintage Risk
+  Analysis model. If you cannot click the link, see the image below!
+
+  The app allows a user to enter a commercial loan profile and receive a predicted Net Loss Percentage from the saved
+  Random Forest Regression model. The app does not retrain the model. It loads the saved model file and model column
+  file, formats the user inputs into the same structure used during training, and then returns a single prediction.
+
+  The app includes inputs for:
+
+  - Months on book
+  - Current balance
+  - Original loan amount
+  - Interest rate
+  - Annual revenue
+  - Original internal risk rating
+  - Industry sector
+  - Credit utilization spike
+  - Revenue drop indicator
+
+  After the user submits the form, the app displays the predicted net loss percentage and assigns the loan profile to a
+  simple risk band:
+
+   Risk Band           Predicted Net Loss %    Recommended Action
+  ━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Low Loss Risk                Below 1.00%    Continue normal monitoring
+  ──────────────────  ──────────────────────  ──────────────────────────────────────────────────────────────────────────
+   Medium Loss Risk          1.00% to 2.50%    Review borrower trends, revenue pressure, utilization changes, and
+                                               vintage performance
+  ──────────────────  ──────────────────────  ──────────────────────────────────────────────────────────────────────────
+   High Loss Risk               Above 2.50%    Flag for credit review and prioritize portfolio monitoring
+
+  This turns the project from a static machine learning analysis into a simple business-facing risk tool! A credit
+  analyst or portfolio manager could use this type of app to quickly test loan profiles, understand estimated loss risk,
+  and decide whether a loan should remain in normal monitoring or receive closer review.
+
+  The Streamlit app is still a portfolio demo and is not intended to be a production credit decisioning tool. However,
+  it shows how the model could be packaged into a practical interface for commercial lending analytics teams. Looking forward to hearing from you!
+
+ # Streamlit App View
+
+  <img width="752" height="664" alt="Screenshot 2026-07-10 at 12 02 30 PM" src="https://github.com/user-attachments/assets/67a4ac47-6ea2-43d3-a9e9-0607fb7b1bcf" />
+
+
