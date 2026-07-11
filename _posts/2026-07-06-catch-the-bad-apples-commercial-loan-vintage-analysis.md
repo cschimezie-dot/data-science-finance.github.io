@@ -2,7 +2,7 @@
 layout: post
 title: "Catch The Bad Apples: Commercial Loan Vintage Risk Analysis"
 image: "/posts/apples_in_a_wooden_bowl_still_life.jpg"
-tags: [Python, Pandas, Machine Learning, Random Forest, Commercial Lending, Credit Risk, Vintage Analysis]
+tags: [Python, Data Visualization, Machine Learning & AI, Random Forest, Commercial Lending, Credit Risk, Vintage Analysis]
 ---
 
 In this project, I built a commercial lending risk analytics workflow to predict net loss percentage and identify weak commercial loan vintages before losses become harder to control.
