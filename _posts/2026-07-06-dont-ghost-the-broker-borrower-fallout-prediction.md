@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Ghost the Broker: Borrower Fallout Prediction"
-image: "/posts/borrower_fallout_title_image.jpg_fallout_hero.png"
+image: "/posts/borrower_fallout_title_image.jpg"
 tags: [Python, Machine Learning, Classification, Random Forest, Data Cleaning]
 ---
 
